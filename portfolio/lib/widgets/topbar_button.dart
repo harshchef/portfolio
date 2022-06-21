@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 class RoundedButtonWidget extends StatelessWidget {
   final String buttonText;
+  final String routenm;
 
   RoundedButtonWidget({
     required this.buttonText,
+    required this.routenm,
   });
 
   @override
@@ -41,7 +43,9 @@ class RoundedButtonWidget extends StatelessWidget {
             // elevation: MaterialStateProperty.all(3),
             shadowColor: MaterialStateProperty.all(Colors.transparent),
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, routenm);
+          },
           child: Padding(
             padding: const EdgeInsets.only(
               top: 10,
