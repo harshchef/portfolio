@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constant.dart';
 import 'package:portfolio/widgets/mypic.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/widgets/topbar_button.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -35,18 +35,58 @@ class _HomeScreenState extends State<HomeScreen> {
         constraints:
             BoxConstraints(maxWidth: widthscreen, maxHeight: heightscreen),
         child: Center(
-            child: SingleChildScrollView(
-          child: Column(
-            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                child: NavBAr(),
+            child: Column(
+          //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              child: NavBAr(),
+            ),
+            SizedBox(
+              height: 35,
+            ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+                    children: [
+                      Text(
+                        'Hi 👋',
+                        textDirection: TextDirection.ltr,
+                        style: GoogleFonts.pacifico(
+                            fontSize: 30, color: textcolor),
+                      ),
+                      Text(
+                        "I'm a student and tech enthusiast having a keen interest in coding.\nMy fields of interest are cross platform software development, data visualization, ML, AI .\nParticipation in extracurricular activities such as singing, dance and skit during my academic career\nhas given me skills in communication, teamwork and cooperation.\nI've hands on experience in programming languages such as Java, python, C++, C, R.\nI upload my projects on GitHub",
+                        style: TextStyle(
+                          fontSize: 16,
+                          //fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30.0),
+                        border: Border.all(color: primaryColor)),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(30.0),
+                      child: Image.asset(
+                        'assets/my/me (10).png',
+                        fit: BoxFit.fill,
+                        width: 288,
+                        height: 512,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              SizedBox(
-                height: 50,
-              ),
-            ],
-          ),
+            ),
+          ],
         )),
       ),
     );

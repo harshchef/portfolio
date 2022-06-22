@@ -37,11 +37,11 @@ class _AboutState extends State<About> {
           child: Column(
             //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              SizedBox(
+                height: 15,
+              ),
               Container(
                 child: NavBAr(),
-              ),
-              SizedBox(
-                height: 50,
               ),
               Container(
                 child: Intro(),

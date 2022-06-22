@@ -33,15 +33,16 @@ class _WorkState extends State<Work> {
         constraints:
             BoxConstraints(maxWidth: widthscreen, maxHeight: heightscreen),
         child: Center(
-            child: SingleChildScrollView(
-          child: Column(
-            //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                child: NavBAr(),
-              ),
-            ],
-          ),
+            child: Column(
+          //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              child: NavBAr(),
+            ),
+          ],
         )),
       ),
     );
